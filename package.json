@@ -2,11 +2,26 @@
   "name": "brainstemjs",
   "version": "1.0.0",
   "description": "brainstemjs is machine learning library for javascript",
+  "homepage": "https://github.com/rizki4106/brainstemjs",
+  "bugs": {
+    "url": "https://github.com/rizki4106/brainstemjs/issues",
+    "email": "rizkimaulana4106@gmail.com"
+  },
+  "keywords": [
+    "machine-learning",
+    "supervise-learning",
+    "brainstemjs",
+    "ml",
+    "artificial-intelligence"
+  ],
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rizki4106/brainstemjs.git"
+  },
   "author": "",
   "license": "ISC",
   "dependencies": {
