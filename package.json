@@ -1,0 +1,16 @@
+{
+  "name": "brainstemjs",
+  "version": "1.0.0",
+  "description": "brainstemjs is machine learning library for javascript",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "mathjs": "^8.1.0",
+    "sort-json-array": "^0.1.7"
+  }
+}
