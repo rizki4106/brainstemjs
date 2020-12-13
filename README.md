@@ -8,7 +8,7 @@
 brainstemjs is machine learning library for javascript.
 
 ```bash
-npm install brainstemjs
+npm install brainstem
 ```
 
 ### Available Algorithm
@@ -20,9 +20,9 @@ npm install brainstemjs
 ### Example
 K Nearest Neighbors Algorithm
 ```javascript
-const {KNNeighborClassifier} = require("test_brainstemjs")
-const {accuracy_score} = require("test_brainstemjs/metrics")
-const {train_test_split} = require("test_brainstemjs/selection")
+const {KNNeighborClassifier} = require("brainstem")
+const {accuracy_score} = require("brainstem/metrics")
+const {train_test_split} = require("brainstem/selection")
 
 const x = [40, 65, 75, 80]
 const y = ["E","D","B","A"]
@@ -37,7 +37,7 @@ console.log(accuracy_score(y_test, y_pred))
 Linear Regression Polynomial Order 1
 
 ```javascript
-const {PolynomialOrderOne} = require("test_brainstemjs")
+const {PolynomialOrderOne} = require("brainstem")
 const x = [1,2,3,4,5]
 const y = [5,4,3,2,1]
 
@@ -52,7 +52,7 @@ console.log(pred)
 Linear Regression Polynomial Order 2
 
 ```javascript
-const {PolynomialOrderTwo} = require("test_brainstemjs")
+const {PolynomialOrderTwo} = require("brainstem")
 const x = [1,2,3,4,5]
 const y = [5,4,3,2,1]
 
