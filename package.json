@@ -1,7 +1,7 @@
 {
-  "name": "brainstemjs",
+  "name": "brainstem-js",
   "version": "1.0.0",
-  "description": "brainstemjs is machine learning library for javascript",
+  "description": "brainstem-js is machine learning library for javascript",
   "homepage": "https://github.com/rizki4106/brainstemjs",
   "bugs": {
     "url": "https://github.com/rizki4106/brainstemjs/issues",
