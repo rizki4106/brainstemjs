@@ -8,7 +8,7 @@
 brainstemjs is machine learning library for javascript.
 
 ```bash
-npm install brainstemjs
+npm install brainstem
 ```
 
 ### Available Algorithm
