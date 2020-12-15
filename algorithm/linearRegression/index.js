@@ -141,10 +141,16 @@ class PolynomialOrderOne{
 
     // return prediction
 
-    predict(x = 0){
+    predict(x = []){
+
         const data = this.state
-        const calculate_x = data.regression.a + data.regression.b * x
-        return calculate_x
+
+        let result = []
+
+        for(let i = 0; i < x.length; i++){
+            result.push(data.regression.a + (data.regression.b * x[i]))
+        }
+        return result
     }
 }
 class PolynomialOrderTwo{
@@ -345,10 +351,15 @@ class PolynomialOrderTwo{
         }
     }
 
-    predict(x = 0){
+    predict(x = []){
         const states = this.state
-        const predict_value = states.regression.a + (states.regression.b * x) + (states.regression.c * Math.pow(x,2))
-        return predict_value
+        
+        let result = []
+        for(let i = 0; i < x.length; i++){
+            result.push(states.regression.a + (states.regression.b * x[i]) + (states.regression.c * Math.pow(x[i],2)))
+        }
+
+        return result
     }
 }
 
