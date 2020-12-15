@@ -15,10 +15,12 @@ npm install brainstem
 | Name |
 |------|
 |K Nearest Neighbor (KNN)|
-|Linear Regression Polinomial Order 1 and Order 2|
+|Linear Regression Polynomial Order 1 and Order 2|
 
 ### Example
 K Nearest Neighbors Algorithm
+
+*try on google colab [https://colab.research.google.com/drive/1dYQ6m1bSl-6EROI5kqAXwBoaXrPx8IyS?usp=sharing](https://colab.research.google.com/drive/1dYQ6m1bSl-6EROI5kqAXwBoaXrPx8IyS?usp=sharing)*
 ```javascript
 const {KNNeighborClassifier} = require("brainstem")
 const {accuracy_score} = require("brainstem/metrics")
@@ -27,7 +29,7 @@ const {train_test_split} = require("brainstem/selection")
 const x = [40, 65, 75, 80]
 const y = ["E","D","B","A"]
 
-const knn = new KNNeighborClassifier(n_neighbor=1)
+const knn = new KNNeighborClassifier(n_neighbors = 1)
 const [x_train, x_test, y_train, y_test] = train_test_split(x,y, test_size=0.3)
 knn.fit(x_train,y_train)
 
