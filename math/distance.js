@@ -1,3 +1,4 @@
+const math = require("mathjs")
 class DistanceClassifier{
 
     euclidean(x = [], y = []){
@@ -13,6 +14,18 @@ class DistanceClassifier{
         // return the distance
         return Math.sqrt(sumdistance)
     }
+
+    manhattan(x = [], y = []){
+        /*
+        calculating distance using manhattan distance formula
+        */
+        let min = []
+        for(let i = 0; i < x.length; i++){
+            min.push(Math.abs(x[i] - y[i]))
+        }
+        return math.sum(min)
+    }
+    
 }
 
 const distance = new DistanceClassifier()

@@ -29,13 +29,19 @@ const {train_test_split} = require("brainstem/selection")
 const x = [40, 65, 75, 80]
 const y = ["E","D","B","A"]
 
-const knn = new KNNeighborClassifier(n_neighbors = 1)
+const knn = new KNNeighborClassifier(n_neighbors = 1, distance = "manhattan")
 const [x_train, x_test, y_train, y_test] = train_test_split(x,y, test_size=0.3)
 knn.fit(x_train,y_train)
 
 const y_pred = knn.predict(x_test)
 console.log(accuracy_score(y_test, y_pred))
 ```
+available distance for K Nearest Neighbors
+| Name |
+|------|
+| Euclidean Distance |
+| Manhattan Distance |
+<hr/>
 Linear Regression Polynomial Order 1
 
 ```javascript

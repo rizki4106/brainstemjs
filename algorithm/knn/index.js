@@ -3,10 +3,11 @@ const {argsort, counter} = require("../../selection")
 
 class KNNeigborClassifier{
 
-    constructor(n_neigbors = 1){
+    constructor(n_neigbors = 1, distance = ""){
         this.x_train = []
         this.y_train = []
         this.n_neigbors = n_neigbors
+        this.distance = distance
     }
 
     fit(x,y){
@@ -26,19 +27,18 @@ class KNNeigborClassifier{
        for(let i = 0; i < x.length; i++){
            predicted.push(this._calculate(x[i]))
        }
-
-        return predicted
+       return predicted
 
     }
 
     _calculate(x){
 
         // get the distance
-
         let distances = []
         this.x_train.forEach(train => {
-            distances.push(distance.euclidean([x], [train]))
+            distances.push(distance[this.distance]([x], [train]))
         })
+        console.log(distances)
         
         // get the lable
 
@@ -48,7 +48,6 @@ class KNNeigborClassifier{
         })
 
         // get most common lable
-
         const most_common = counter(predict, this.n_neigbors)
         return most_common
     }
