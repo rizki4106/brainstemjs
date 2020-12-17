@@ -25,6 +25,19 @@ class DistanceClassifier{
         }
         return math.sum(min)
     }
+
+    chebyshev(x = [], y = []){
+        /*
+        * get the bigger distance
+        */
+        let arr = []
+        for(let i = 0; i < x.length; i++){
+            arr.push(Math.abs(x[i] - y[i]))
+        }
+    
+        return math.max(arr)
+    
+    }
     
 }
 

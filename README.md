@@ -37,10 +37,11 @@ const y_pred = knn.predict(x_test)
 console.log(accuracy_score(y_test, y_pred))
 ```
 available distance for K Nearest Neighbors
-| Name |
-|------|
-| Euclidean Distance |
-| Manhattan Distance |
+| Name | Formula |
+|------| ------- |
+| euclidean distance | ![](https://chrisjmccormick.files.wordpress.com/2014/07/euclidean-distance.png) |
+| manhattan distance | ![](http://www.improvedoutcomes.com/docs/WebSiteDocs/image/diagram_manhattan_distance_metric.gif)
+| chebyshev distance | [![chebychev.png](https://i.postimg.cc/L8F3DSdg/chebychev.png)](https://postimg.cc/jLvfqGSR) |
 <hr/>
 Linear Regression Polynomial Order 1
 
