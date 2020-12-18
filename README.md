@@ -23,18 +23,28 @@ K Nearest Neighbors Algorithm
 *try on google colab [https://colab.research.google.com/drive/1dYQ6m1bSl-6EROI5kqAXwBoaXrPx8IyS?usp=sharing](https://colab.research.google.com/drive/1dYQ6m1bSl-6EROI5kqAXwBoaXrPx8IyS?usp=sharing)*
 ```javascript
 const {KNNeighborClassifier} = require("brainstem")
-const {accuracy_score} = require("brainstem/metrics")
+const {
+    accuracy_score, 
+    classification_report
+} = require("brainstem/metrics")
+
 const {train_test_split} = require("brainstem/selection")
 
+// data
 const x = [40, 65, 75, 80]
 const y = ["E","D","B","A"]
 
+// 
 const knn = new KNNeighborClassifier(n_neighbors = 1, distance = "manhattan")
 const [x_train, x_test, y_train, y_test] = train_test_split(x,y, test_size=0.3)
 knn.fit(x_train,y_train)
 
+// prediction data
 const y_pred = knn.predict(x_test)
+
+// performance
 console.log(accuracy_score(y_test, y_pred))
+console.log(classification_report(y_test, y_pred))
 ```
 available distance for K Nearest Neighbors
 | Name | Formula |
